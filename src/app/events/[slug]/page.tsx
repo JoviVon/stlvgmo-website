@@ -5,8 +5,9 @@ import Container from "@/app/_components/container";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Link from "next/link";
 
-export default async function Event({ params }: { params: { slug: string } }) {
-  const event = getEventBySlug(params.slug);
+export default async function Event({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const event = getEventBySlug(slug);
 
   if (!event) {
     return notFound();
@@ -103,8 +104,9 @@ export default async function Event({ params }: { params: { slug: string } }) {
   );
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const event = getEventBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const event = getEventBySlug(slug);
 
   if (!event) {
     return notFound();
