@@ -9,21 +9,21 @@ author:
 ogImage:
   url: ""
 ---
-# LOCATION PENDING
+
 Join us for an unforgettable evening as the St. Louis Video Game Music Orchestra presents the beloved music from the Super Mario video game series!
 
 ## Program Highlights
+
 - **Super Mario Galaxy** - Gusty Garden Galaxy and other celestial favorites
 - **Super Mario Odyssey** - Jump Up, Super Star!
 - **Super Mario** - And much from various classics!
 
 ## Event Details
+
 **Date:** Sunday, October 5th, 2025  
 **Time:** 7:00 PM  
-**Venue:** TBD
+**Venue:** Webster Grove Highschool, 100 Selma Ave, Webster Groves, MO 63119
 
 ## Tickets
-Tickets will be available soon. Concert is free for all to attend. Tickets are incase auditorium is full.
 
-
-
+Concert is free for all to attend. Tickets are incase auditorium is full. Only 800 seats.
