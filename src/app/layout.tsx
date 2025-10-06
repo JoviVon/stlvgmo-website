@@ -66,6 +66,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          async
+          src="https://widgets.givebutter.com/latest.umd.cjs?acct=pMAv5drF6HRYk0aR&p=other"
+        ></script>
+
         <script dangerouslySetInnerHTML={{ __html: noFOUCScript }} />
         <link
           rel="apple-touch-icon"

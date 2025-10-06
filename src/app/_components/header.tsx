@@ -27,6 +27,7 @@ const Header = () => {
     //{ href: "/calendar", label: "Calendar" },
     //{ href: "/auditions", label: "Auditions" },
     { href: "/contact", label: "Contact" },
+    { href: "/donate", label: "Donate" },
   ];
 
   return (
