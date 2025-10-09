@@ -162,7 +162,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-medium text-gray-900 dark:text-white">
-                      Location
+                      Rehearsal Location
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300">
                       Webster Grove High School
