@@ -6,51 +6,6 @@ import cn from "classnames";
 
 import "./globals.css";
 
-const STORAGE_KEY = "nextjs-blog-starter-theme";
-
-const noFOUCScript = `
-(function() {
-  const [SYSTEM, DARK, LIGHT] = ["system", "dark", "light"];
-  
-  const modifyTransition = () => {
-    const css = document.createElement("style");
-    css.textContent = "*,*:after,*:before{transition:none !important;}";
-    document.head.appendChild(css);
-    return () => {
-      if (document.body) {
-        getComputedStyle(document.body);
-      }
-      setTimeout(() => {
-        if (document.head.contains(css)) {
-          document.head.removeChild(css);
-        }
-      }, 1);
-    };
-  };
-
-  const media = matchMedia(\`(prefers-color-scheme: \${DARK})\`);
-
-  window.updateDOM = () => {
-    const restoreTransitions = modifyTransition();
-    const mode = localStorage.getItem("${STORAGE_KEY}") ?? SYSTEM;
-    const systemMode = media.matches ? DARK : LIGHT;
-    const resolvedMode = mode === SYSTEM ? systemMode : mode;
-    const classList = document.documentElement.classList;
-    if (resolvedMode === DARK) classList.add(DARK);
-    else classList.remove(DARK);
-    document.documentElement.setAttribute("data-mode", mode);
-    restoreTransitions();
-  };
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', window.updateDOM);
-  } else {
-    window.updateDOM();
-  }
-  media.addEventListener("change", window.updateDOM);
-})();
-`;
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -64,14 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <script
           async
           src="https://widgets.givebutter.com/latest.umd.cjs?acct=pMAv5drF6HRYk0aR&p=other"
         ></script>
 
-        <script dangerouslySetInnerHTML={{ __html: noFOUCScript }} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -104,9 +58,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body
-        className={cn(inter.className, "dark:bg-gray-900 dark:text-gray-300")}
-      >
+      <body className={cn(inter.className, "bg-gray-900 text-gray-300")}>
         <Header />
         <div className="min-h-screen">{children}</div>
         <Footer />
