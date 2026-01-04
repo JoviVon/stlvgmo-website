@@ -69,3 +69,41 @@ export function getAllEvents(): Event[] {
     .sort((event1, event2) => (event1.date < event2.date ? -1 : 1));
   return events;
 }
+
+// Gallery-related functions
+const galleryDirectory = join(process.cwd(), "public/assets/gallery");
+
+export interface GalleryImage {
+  filename: string;
+  path: string;
+  alt: string;
+}
+
+export function getGalleryImages(): GalleryImage[] {
+  try {
+    // Check if gallery directory exists
+    if (!fs.existsSync(galleryDirectory)) {
+      return [];
+    }
+
+    const files = fs.readdirSync(galleryDirectory);
+    const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
+
+    const images = files
+      .filter((file) => {
+        const ext = file.toLowerCase().substring(file.lastIndexOf("."));
+        return imageExtensions.includes(ext);
+      })
+      .map((filename) => ({
+        filename,
+        path: `/assets/gallery/${filename}`,
+        alt: filename.replace(/\.[^/.]+$/, "").replace(/[-_]/g, " "),
+      }))
+      .sort((a, b) => a.filename.localeCompare(b.filename));
+
+    return images;
+  } catch (error) {
+    console.error("Error reading gallery images:", error);
+    return [];
+  }
+}
