@@ -9,7 +9,14 @@ type Props = {
 
 export function MoreStories({ posts, showViewAll = false }: Props) {
   return (
-    <section>
+    <section className="animate-fade-in">
+      {/* Retro-style divider */}
+      <div className="mb-12 flex items-center justify-center gap-2">
+        <div className="w-2 h-2 bg-stlvgmo-blue-600 transform rotate-45"></div>
+        <div className="w-2 h-2 bg-stlvgmo-orange-500 transform rotate-45"></div>
+        <div className="w-2 h-2 bg-stlvgmo-blue-600 transform rotate-45"></div>
+      </div>
+
       <div className="mb-8 flex justify-between items-center">
         <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
           {showViewAll ? "Recent Posts" : "All Posts"}
@@ -17,9 +24,22 @@ export function MoreStories({ posts, showViewAll = false }: Props) {
         {showViewAll && (
           <Link
             href="/posts"
-            className="text-primary-400 hover:underline font-medium"
+            className="group inline-flex items-center gap-2 text-stlvgmo-orange-400 hover:text-stlvgmo-orange-300 font-medium transition-colors duration-200"
           >
-            View All Posts →
+            View All Posts
+            <svg
+              className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </Link>
         )}
       </div>

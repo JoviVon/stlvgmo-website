@@ -33,12 +33,19 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-gray-900 border-b border-gray-700 backdrop-blur-sm bg-opacity-90">
+    <header
+      className="sticky top-0 z-50 bg-gray-900 border-b border-gray-700 backdrop-blur-sm bg-opacity-90"
+      role="banner"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link
+              href="/"
+              className="flex items-center"
+              aria-label="STLVGMO Home"
+            >
               <img
                 src="/assets/blog/logos/STLVGMO_logomark.svg"
                 alt="STLVGMO Logo"
@@ -48,7 +55,10 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav
+            className="hidden md:flex space-x-8"
+            aria-label="Main navigation"
+          >
             {navItems.map((item) =>
               item.external ? (
                 <a
@@ -79,6 +89,8 @@ const Header = () => {
             <form
               onSubmit={handleSubmit}
               className="hidden md:flex items-center space-x-2"
+              role="search"
+              aria-label="Search posts"
             >
               <input
                 type="text"
@@ -86,8 +98,9 @@ const Header = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search posts..."
                 className="px-3 py-1 border border-gray-600 rounded-md bg-gray-800 text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                aria-label="Search input"
               />
-              <button type="submit" className="p-1">
+              <button type="submit" className="p-1" aria-label="Submit search">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -109,9 +122,12 @@ const Header = () => {
             <button
               onClick={toggleMenu}
               className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-primary-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition-colors duration-200"
-              aria-expanded="false"
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle navigation menu"
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">
+                {isMenuOpen ? "Close main menu" : "Open main menu"}
+              </span>
               {/* Hamburger icon */}
               <svg
                 className={`${isMenuOpen ? "hidden" : "block"} h-6 w-6`}
@@ -149,7 +165,11 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
+        <div
+          className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}
+          role="navigation"
+          aria-label="Mobile navigation"
+        >
           <div className="px-2 pt-2 pb-3 space-y-1 border-t border-gray-700">
             {navItems.map((item) =>
               item.external ? (
@@ -174,7 +194,12 @@ const Header = () => {
                 </Link>
               )
             )}
-            <form onSubmit={handleSubmit} className="px-3 py-2">
+            <form
+              onSubmit={handleSubmit}
+              className="px-3 py-2"
+              role="search"
+              aria-label="Mobile search"
+            >
               <div className="flex items-center space-x-2">
                 <input
                   type="text"
@@ -182,8 +207,13 @@ const Header = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search posts..."
                   className="flex-1 px-3 py-2 border border-gray-600 rounded-md bg-gray-800 text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  aria-label="Mobile search input"
                 />
-                <button type="submit" className="p-2">
+                <button
+                  type="submit"
+                  className="p-2"
+                  aria-label="Submit mobile search"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
