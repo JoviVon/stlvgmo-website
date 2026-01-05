@@ -1,5 +1,7 @@
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
+import HeroCTA from "@/app/_components/hero-cta";
+import UpcomingEvents from "@/app/_components/upcoming-events";
 import { MoreStories } from "@/app/_components/more-stories";
 import GalleryCarousel from "@/app/_components/gallery-carousel";
 import ShopPreview from "@/app/_components/shop-preview";
@@ -15,6 +17,8 @@ export default function Index() {
     <main>
       <Container>
         <Intro />
+        <HeroCTA />
+        <UpcomingEvents />
         <GalleryCarousel images={galleryImages} />
         <ShopPreview />
         {recentPosts.length > 0 && (

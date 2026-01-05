@@ -21,10 +21,10 @@ const config: Config = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
-        
+
         // STLVGMO Brand Colors
-        "stlvgmo": {
-          "blue": {
+        stlvgmo: {
+          blue: {
             50: "#f0f4ff",
             100: "#e0e9ff",
             200: "#c7d6ff",
@@ -37,7 +37,7 @@ const config: Config = {
             900: "#1b3eda", // Primary brand blue
             950: "#151f8a",
           },
-          "orange": {
+          orange: {
             50: "#fffbf0",
             100: "#fff6e0",
             200: "#ffebc7",
@@ -51,7 +51,7 @@ const config: Config = {
             950: "#8a4f0f",
           },
         },
-        
+
         // Semantic color mappings
         primary: {
           50: "#f0f4ff",
@@ -95,6 +95,31 @@ const config: Config = {
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
+      },
+      animation: {
+        "fade-in": "fadeIn 0.8s ease-out",
+        "slide-in": "slideIn 0.6s ease-out",
+        "slide-up": "slideUp 0.5s ease-out",
+        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        glow: "glow 2s ease-in-out infinite",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        slideIn: {
+          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(249, 169, 34, 0.5)" },
+          "50%": { boxShadow: "0 0 30px rgba(249, 169, 34, 0.8)" },
+        },
       },
     },
   },
