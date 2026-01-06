@@ -26,7 +26,7 @@ export const upcomingEvents: Event[] = [
     zip: "63119",
     description:
       "Join us for an evening of epic video game music performed live by the St. Louis Video Game Music Orchestra feature selections from Elden Ring, Hollow Knights, Final Fantasy, and Genshin Impact",
-    ticketLink: "/program",
+    ticketLink: "https://givebutter.com/mY39pq",
   },
   {
      id: "summer-2026-concert",
@@ -40,7 +40,7 @@ export const upcomingEvents: Event[] = [
     zip: "63119",
     description:
       "Join us for an evening of epic video game music performed live by the St. Louis Video Game Music Orchestra!",
-     ticketLink: "/program",
+     ticketLink: "",
    },
   // Add more events below - just copy the template above and update the details!
   // Example:
