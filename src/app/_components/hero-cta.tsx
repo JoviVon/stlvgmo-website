@@ -8,7 +8,7 @@ export default function HeroCTA() {
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
         {/* Primary CTA - Get Tickets */}
         <Link
-          href="/program"
+          href="https://givebutter.com/mY39pq"
           className="group relative px-8 py-4 bg-gradient-to-r from-stlvgmo-orange-600 to-stlvgmo-orange-500 text-white font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-out overflow-hidden"
         >
           <span className="relative z-10 flex items-center gap-2">
