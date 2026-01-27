@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STLVGMO Spring 2026 Concert - Flyer Centerpiece</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .flyer-container {
+        width: 8.5in;
+        height: 11in;
+        background: linear-gradient(
+          135deg,
+          #1a1a2e 0%,
+          #16213e 50%,
+          #0f3460 100%
+        );
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .poster-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .content-overlay {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      }
+
+      .orchestra-name {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        color: #ffd700;
+      }
+
+      .concert-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 20px 0;
+        line-height: 1.2;
+        background: linear-gradient(45deg, #ffd700, #ffed4e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .subtitle {
+        font-size: 24px;
+        font-style: italic;
+        color: #e0e0e0;
+        margin-bottom: 30px;
+      }
+
+      .featured-games {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+        backdrop-filter: blur(10px);
+      }
+
+      .games-title {
+        font-size: 22px;
+        color: #ffd700;
+        margin-bottom: 15px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .games-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        color: white;
+        font-size: 18px;
+      }
+
+      .game-item {
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .event-details {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+      }
+
+      .detail-row {
+        margin: 15px 0;
+        font-size: 20px;
+      }
+
+      .detail-label {
+        color: #ffd700;
+        font-weight: bold;
+        display: inline-block;
+        min-width: 100px;
+      }
+
+      .detail-value {
+        color: white;
+        font-size: 22px;
+      }
+
+      .venue-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffd700;
+        margin-top: 20px;
+      }
+
+      .ticket-info {
+        background: linear-gradient(45deg, #ffd700, #ffed4e);
+        color: #1a1a2e;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .qr-placeholder {
+        width: 120px;
+        height: 120px;
+        background: white;
+        margin: 20px auto;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: #333;
+        text-align: center;
+        padding: 10px;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+        }
+        .flyer-container {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flyer-container">
+      <!-- Background poster image -->
+      <img
+        src="STLVGMO_poster_Spring2026_24Jan.png"
+        alt="Spring 2026 Concert Poster"
+        class="poster-image"
+      />
+
+      <!-- Content overlay -->
+      <div class="content-overlay">
+        <div class="header">
+          <div class="orchestra-name">ST. LOUIS VIDEO GAME MUSIC ORCHESTRA</div>
+          <div class="concert-title">FROM HOLLOW<br />TO GRACE</div>
+          <div class="subtitle">Spring Concert 2026</div>
+        </div>
+
+        <div class="featured-games">
+          <div class="games-title">FEATURING MUSIC FROM</div>
+          <div class="games-list">
+            <div class="game-item">🎮 ELDEN RING</div>
+            <div class="game-item">🦋 HOLLOW KNIGHT</div>
+            <div class="game-item">⚔️ FINAL FANTASY</div>
+            <div class="game-item">🌟 GENSHIN IMPACT</div>
+          </div>
+        </div>
+
+        <div class="event-details">
+          <div class="detail-row">
+            <span class="detail-label">DATE:</span>
+            <span class="detail-value">Friday, May 8, 2026</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">TIME:</span>
+            <span class="detail-value">7:30 PM</span>
+          </div>
+          <div class="venue-name">Webster Grove High School</div>
+          <div style="font-size: 16px; margin-top: 10px; color: #e0e0e0">
+            100 Selma Ave, Webster Groves, MO 63119
+          </div>
+
+          <div class="ticket-info">
+            🎫 GET TICKETS NOW!<br />
+            <span style="font-size: 16px">givebutter.com/mY39pq</span>
+          </div>
+
+          <div class="qr-placeholder">
+            [QR CODE]<br />
+            Scan for tickets
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Print instructions
+      console.log("To print this flyer:");
+      console.log("1. Press Ctrl+P (or Cmd+P on Mac)");
+      console.log('2. Select "Save as PDF" or your printer');
+      console.log('3. Set paper size to Letter (8.5" x 11")');
+      console.log('4. Ensure "Background graphics" is enabled');
+    </script>
+  </body>
+</html>
