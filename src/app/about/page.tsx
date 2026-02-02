@@ -26,7 +26,7 @@ export default function About() {
               little room for new and unique musical experiences.
             </p>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              That’s where STLVGMO comes in. We’re an orchestra dedicated
+              That's where STLVGMO comes in. We're an orchestra dedicated
               entirely to performing video game soundtracks—music that is not
               only brilliantly composed, but also deeply connected to the
               stories, characters, and emotions that have shaped generations of
@@ -40,7 +40,7 @@ export default function About() {
               non-traditional repertoire, and where fans of video games can hear
               the music they love performed live by a full ensemble. We believe
               video game music deserves the same spotlight as film scores and
-              symphonies—it’s powerful, emotional, and worthy of being shared
+              symphonies—it's powerful, emotional, and worthy of being shared
               with the community.
             </p>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
@@ -55,10 +55,24 @@ export default function About() {
               talent in our city.
             </p>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Whether you’re a lifelong gamer, a lover of orchestral music, or
+              Whether you're a lifelong gamer, a lover of orchestral music, or
               just curious to hear something new, we invite you to join us on
-              this journey. Together, we’ll show that the soundtrack of gaming
+              this journey. Together, we'll show that the soundtrack of gaming
               is more than just background music.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-4">Supporting Our Mission</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-4">
+              STLVGMO is proud to be a federally recognized 501(c)(3) nonprofit
+              organization. This status allows us to accept tax-deductible
+              donations that help fund our concerts, music arrangements, venue
+              rentals, and community outreach programs.
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+              We are a federally recognized 501(c)(3) nonprofit. Donations are
+              tax-deductible to the extent allowed by law. Your support helps us
+              continue bringing the magic of video game music to St. Louis and
+              beyond.
             </p>
           </div>
         </div>
