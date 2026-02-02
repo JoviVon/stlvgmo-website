@@ -27,6 +27,10 @@ export function Footer() {
                 {ORGANIZATION.name} - Bringing video game music to life through
                 orchestral performance.
               </p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 max-w-md">
+                We are a federally recognized 501(c)(3) nonprofit. Donations are
+                tax-deductible to the extent allowed by law.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
