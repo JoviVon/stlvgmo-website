@@ -2,6 +2,7 @@ import Footer from "@/app/_components/footer";
 import Header from "@/app/_components/header";
 import ParallaxBackground from "@/app/_components/parallax-background";
 import { StructuredData } from "@/app/_components/structured-data";
+import { upcomingEvents } from "@/lib/events-data";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
@@ -106,7 +107,7 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <StructuredData />
+        <StructuredData events={upcomingEvents} />
       </head>
       <body className={cn(inter.className, "bg-gray-900 text-gray-300")}>
         <ParallaxBackground />
