@@ -27,40 +27,45 @@ export interface Event {
 // Add your events here - just copy and paste this template for new events!
 export const upcomingEvents: Event[] = [
   {
-    id: "spring-2026-concert",
-    title: "Spring Concert: From Hollow to Grace",
-    date: "Friday May 8, 2026",
-    time: "7:30 PM",
+    id: "summer-2026-concert",
+    title: "Echos of Hyrule",
+    date: "Saturday July 11, 2026",
+    time: "1:00 PM",
     venue: "Webster Grove High School",
     address: "100 Selma Ave",
     city: "Webster Groves",
     state: "MO",
     zip: "63119",
-    description:
-      "Join us for an evening of epic video game music performed live by the St. Louis Video Game Music Orchestra feature selections from Elden Ring, Hollow Knights, Final Fantasy, and Genshin Impact",
-    ticketLink: "https://givebutter.com/mY39pq",
-    // SEO fields
-    image: "/assets/STLVGMO_poster_Spring2026_24Jan.png",
-    price: "free",
-    currency: "USD",
-    availability: "InStock",
-    eventStatus: "EventScheduled",
-    startDate: "2026-05-08T19:30:00-05:00", // 7:30 PM Central Time
-    endDate: "2026-05-08T21:30:00-05:00", // Estimated 2-hour concert
+    description: 'All Legend of Zelda music concert: "Echos of Hyrule."',
+    ticketLink: "https://givebutter.com/stlvgmo-echos-of-hyrule",
   },
   {
-    id: "summer-2026-concert",
-    title: "Summer Concert 2026",
-    date: "TBD",
+    id: "trivia-night-2026",
+    title: "STLVGMO Trivia Night",
+    date: "November 2026",
     time: "TBD",
-    venue: "Webster Grove High School",
-    address: "100 Selma Ave",
-    city: "Webster Groves",
+    venue: "TBD",
+    address: "TBD",
+    city: "St. Louis",
     state: "MO",
-    zip: "63119",
+    zip: "63101",
     description:
-      "Join us for an evening of epic video game music performed live by the St. Louis Video Game Music Orchestra!",
-    ticketLink: "",
+      "Join us for a fun community trivia night benefiting STLVGMO. Details coming soon.",
+    ticketLink: "/trivia",
+  },
+  {
+    id: "gateway-fate-2026",
+    title: "Gateway Fate (Placeholder)",
+    date: "October 2026",
+    time: "TBD",
+    venue: "TBD",
+    address: "TBD",
+    city: "St. Louis",
+    state: "MO",
+    zip: "63101",
+    description:
+      "Placeholder listing for our October Gateway Fate event. Full details will be announced soon.",
+    ticketLink: "/events",
   },
   // Add more events below - just copy the template above and update the details!
   // Example:

@@ -1,4 +1,5 @@
 import Container from "@/app/_components/container";
+import DonorRecognition from "@/app/_components/donor-recognition";
 
 export default function Donate() {
   return (
@@ -94,6 +95,117 @@ export default function Donate() {
             </p>
           </div>
 
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+              Donor Tiers
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Gold Supportor
+                </h3>
+                <p className="text-lg font-semibold text-yellow-600 dark:text-yellow-400 mb-3">
+                  Below $50
+                </p>
+                <ul className="text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+                  <li>Name listed on STLVGMO website donor page</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Platinum Supportor
+                </h3>
+                <p className="text-lg font-semibold text-cyan-700 dark:text-cyan-300 mb-3">
+                  $50+
+                </p>
+                <ul className="text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+                  <li>All previous benefits</li>
+                  <li>Name listed in concert programs</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Emerald Supportor
+                </h3>
+                <p className="text-lg font-semibold text-emerald-700 dark:text-emerald-400 mb-3">
+                  $100+
+                </p>
+                <ul className="text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+                  <li>All previous benefits</li>
+                  <li>Special recognition on donor slides before concerts</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Diamond Supportor
+                </h3>
+                <p className="text-lg font-semibold text-indigo-700 dark:text-indigo-400 mb-3">
+                  $500+
+                </p>
+                <ul className="text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+                  <li>All previous benefits</li>
+                  <li>
+                    Small logo or name recognition on website sponsor section
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Master Supportor
+                </h3>
+                <p className="text-lg font-semibold text-purple-700 dark:text-purple-400 mb-3">
+                  $1,000+
+                </p>
+                <ul className="text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+                  <li>All previous benefits</li>
+                  <li>Business card–sized ad in concert programs</li>
+                  <li>Priority seating section when available</li>
+                  <li>Recognition during pre-concert announcements</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Grandmaster Supportor
+                </h3>
+                <p className="text-lg font-semibold text-fuchsia-700 dark:text-fuchsia-400 mb-3">
+                  $2,500+
+                </p>
+                <ul className="text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+                  <li>All previous benefits</li>
+                  <li>Half-page ad in concert programs</li>
+                  <li>Featured logo placement on website</li>
+                  <li>Choose a piece of music for us to play</li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 md:col-span-2">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Challenger Circle
+                </h3>
+                <p className="text-lg font-semibold text-rose-700 dark:text-rose-400 mb-3">
+                  $3,000+
+                </p>
+                <ul className="text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
+                  <li>All previous benefits</li>
+                  <li>Full-page ad in concert programs</li>
+                  <li>Featured sponsor recognition at concerts</li>
+                  <li>Logo placement on select promotional materials</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div className="w-full py-8">
+          <DonorRecognition title="Donor Recognition Wall" />
+        </div>
+
+        <div className="max-w-4xl mx-auto">
           {/* Donation Button */}
           <div className="flex justify-center mb-12">
             <a

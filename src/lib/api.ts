@@ -77,6 +77,7 @@ export interface GalleryImage {
   filename: string;
   path: string;
   alt: string;
+  type: "image" | "video";
 }
 
 export function getGalleryImages(): GalleryImage[] {
@@ -88,20 +89,27 @@ export function getGalleryImages(): GalleryImage[] {
 
     const files = fs.readdirSync(galleryDirectory);
     const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".webp"];
+    const videoExtensions = [".mp4", ".webm", ".mov", ".m4v"];
 
-    const images = files
+    const media = files
       .filter((file) => {
         const ext = file.toLowerCase().substring(file.lastIndexOf("."));
-        return imageExtensions.includes(ext);
+        return imageExtensions.includes(ext) || videoExtensions.includes(ext);
       })
-      .map((filename) => ({
-        filename,
-        path: `/assets/gallery/${filename}`,
-        alt: filename.replace(/\.[^/.]+$/, "").replace(/[-_]/g, " "),
-      }))
+      .map((filename) => {
+        const ext = filename.toLowerCase().substring(filename.lastIndexOf("."));
+        const type = videoExtensions.includes(ext) ? "video" : "image";
+
+        return {
+          filename,
+          path: `/assets/gallery/${filename}`,
+          alt: filename.replace(/\.[^/.]+$/, "").replace(/[-_]/g, " "),
+          type,
+        } as GalleryImage;
+      })
       .sort((a, b) => a.filename.localeCompare(b.filename));
 
-    return images;
+    return media;
   } catch (error) {
     console.error("Error reading gallery images:", error);
     return [];

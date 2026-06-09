@@ -138,3 +138,65 @@ textarea {
     transform: scale(1.2);
   }
 }
+
+@keyframes donorDrift {
+  0% {
+    transform: translateX(calc(var(--drift-distance, 8px) * -1));
+  }
+  50% {
+    transform: translateX(var(--drift-distance, 8px));
+  }
+  100% {
+    transform: translateX(calc(var(--drift-distance, 8px) * -1));
+  }
+}
+
+@keyframes donorBob {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(calc(var(--bob-distance, 4px) * -1));
+  }
+}
+
+@keyframes donorPulseGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 rgba(99, 102, 241, 0),
+      0 0 0 rgba(236, 72, 153, 0);
+  }
+  50% {
+    box-shadow:
+      0 0 14px rgba(99, 102, 241, 0.28),
+      0 0 22px rgba(236, 72, 153, 0.22);
+  }
+}
+
+@layer utilities {
+  .donor-chip {
+    animation:
+      donorDrift var(--drift-duration, 9s) ease-in-out infinite,
+      donorBob var(--bob-duration, 4s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+    will-change: transform;
+  }
+
+  .donor-chip--active {
+    animation:
+      donorDrift var(--drift-duration, 8s) ease-in-out infinite,
+      donorBob var(--bob-duration, 3.2s) ease-in-out infinite,
+      donorPulseGlow var(--pulse-duration, 3.4s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .donor-chip,
+  .donor-chip--active {
+    animation: none !important;
+    transform: none !important;
+  }
+}

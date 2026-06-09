@@ -25,6 +25,7 @@ const Header = () => {
     { href: "/about", label: "About" },
     { href: "/posts", label: "Posts" },
     { href: "/gallery", label: "Gallery" },
+    { href: "/trivia", label: "Trivia Night" },
     { href: "https://shop.stlvgmo.com", label: "Shop", external: true },
     //{ href: "/calendar", label: "Calendar" },
     //{ href: "/auditions", label: "Auditions" },
@@ -80,7 +81,7 @@ const Header = () => {
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-400 group-hover:w-full transition-all duration-200"></span>
                 </Link>
-              )
+              ),
             )}
           </nav>
 
@@ -192,7 +193,7 @@ const Header = () => {
                 >
                   {item.label}
                 </Link>
-              )
+              ),
             )}
             <form
               onSubmit={handleSubmit}

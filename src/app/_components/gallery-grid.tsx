@@ -10,7 +10,7 @@ interface GalleryGridProps {
 
 export default function GalleryGrid({ images }: GalleryGridProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
-    null
+    null,
   );
 
   if (images.length === 0) {
@@ -44,7 +44,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
   const handlePrev = () => {
     if (selectedImageIndex !== null) {
       setSelectedImageIndex(
-        (selectedImageIndex - 1 + images.length) % images.length
+        (selectedImageIndex - 1 + images.length) % images.length,
       );
     }
   };
@@ -52,35 +52,60 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {images.map((image, index) => (
-          <div
-            key={image.filename}
-            className="relative aspect-square overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 cursor-pointer group"
-            onClick={() => handleImageClick(index)}
-          >
-            <img
-              src={image.path}
-              alt={image.alt}
-              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
-                />
-              </svg>
+        {images.map((image, index) => {
+          const isVideo = image.type === "video";
+
+          return (
+            <div
+              key={image.filename}
+              className={`relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 group ${
+                isVideo ? "aspect-video" : "aspect-square cursor-pointer"
+              }`}
+              onClick={() => {
+                if (!isVideo) handleImageClick(index);
+              }}
+            >
+              {isVideo ? (
+                <video
+                  src={image.path}
+                  className="w-full h-full object-cover"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  controlsList="nodownload"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <source src={image.path} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <>
+                  <img
+                    src={image.path}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-12 w-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"
+                      />
+                    </svg>
+                  </div>
+                </>
+              )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {selectedImageIndex !== null && (
