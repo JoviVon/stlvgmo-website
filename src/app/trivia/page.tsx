@@ -7,7 +7,7 @@ export const metadata = {
 };
 
 export default function TriviaPage() {
-  const signupUrl = "https://example.com/trivia-signup";
+  const signupUrl = "https://givebutter.com/st-louis-video-game-orchestra-trivia-night";
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950 text-gray-100">
@@ -33,7 +33,7 @@ export default function TriviaPage() {
                 November 7th
               </li>
               <li>
-                <span className="font-medium text-gray-100">Time:</span> 7:00 PM
+                <span className="font-medium text-gray-100">Time:</span> 7:00-9:30 PM
               </li>
               <li>
                 <span className="font-medium text-gray-100">Location:</span> The
@@ -42,7 +42,7 @@ export default function TriviaPage() {
               </li>
               <li>
                 <span className="font-medium text-gray-100">Team Size:</span>{" "}
-                Add team info
+                8
               </li>
             </ul>
           </div>
@@ -50,8 +50,7 @@ export default function TriviaPage() {
           <div className="rounded-xl border border-gray-700 bg-gray-800/50 p-5">
             <h2 className="text-xl font-semibold mb-3">What to Expect</h2>
             <p className="text-gray-300">
-              Add your trivia categories, prizes, and participation info here so
-              attendees know exactly what to expect.
+              TBD
             </p>
           </div>
         </div>
@@ -69,10 +68,6 @@ export default function TriviaPage() {
           >
             Sign Up for Trivia Night
           </a>
-          <p className="text-sm text-gray-400 mt-4">
-            Replace the placeholder signup URL in{" "}
-            <code>src/app/trivia/page.tsx</code> with your real signup link.
-          </p>
         </div>
 
         <div className="mt-10">
