@@ -1,5 +1,10 @@
 # TODO
 
+## Front Page Poster Replacement
+
+- [x] Update homepage poster image in `app/page.tsx` to `STL_VGM_Orchestra_3.png`.
+- [x] Mark front page poster replacement task complete.
+
 - [x] Update summer concert event details in `lib/events-data.ts`:
   - Title: "Echos of Hyrule"
   - Date: July 11th

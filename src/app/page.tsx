@@ -51,7 +51,7 @@ export default function Index() {
           <Link href="/events" className="block">
             <div className="relative w-full h-[85vh] max-h-[900px] min-h-[520px] overflow-hidden rounded-2xl">
               <Image
-                src="/assets/STLVGMO_July2026_teaser.png"
+                src="/assets/STL_VGM_Orchestra_3.png"
                 alt="Upcoming STLVGMO concert flyer"
                 fill
                 className="object-contain"
