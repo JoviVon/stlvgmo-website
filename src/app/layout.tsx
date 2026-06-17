@@ -75,6 +75,20 @@ export default function RootLayout({
           async
           src="https://widgets.givebutter.com/latest.umd.cjs?acct=pMAv5drF6HRYk0aR&p=other"
         ></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18045624850"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18045624850');
+            `,
+          }}
+        />
 
         <link
           rel="apple-touch-icon"

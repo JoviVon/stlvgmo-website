@@ -1,6 +1,7 @@
-# TODO - Trivia Night November Update
+# TODO - Footer and Sitewide Tag Update
 
-- [x] Add new `/trivia` page with event information and signup CTA
-- [x] Add "Trivia Night" navigation tab in header (desktop + mobile)
-- [x] Make Trivia Night prominent on homepage with highlighted section
-- [x] Verify styling consistency and links
+- [x] Update footer to include legal name and DBA:
+  - Legal name: ST LOUIS VIDEO GAME MUSIC ORCHESTRA
+  - DBA: STLVGMO
+- [x] Add Google tag (gtag.js) with ID AW-18045624850 in root layout head for every page
+- [ ] Verify footer text appears and script is loaded sitewide

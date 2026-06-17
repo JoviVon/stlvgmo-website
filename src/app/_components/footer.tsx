@@ -183,6 +183,9 @@ export function Footer() {
             <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
               {ORGANIZATION.copyright}
             </p>
+            <p className="text-center text-gray-500 dark:text-gray-400 text-sm mt-2">
+              Legal name: ST LOUIS VIDEO GAME MUSIC ORCHESTRA · DBA: STLVGMO
+            </p>
           </div>
         </div>
       </Container>
