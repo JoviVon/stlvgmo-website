@@ -36,8 +36,8 @@ export const upcomingEvents: Event[] = [
     city: "Webster Groves",
     state: "MO",
     zip: "63119",
-    description: 'All Legend of Zelda music concert: "Echos of Hyrule."',
-    ticketLink: "https://givebutter.com/stlvgmo-echos-of-hyrule",
+    description: 'All Legend of Zelda music concert: "Echoes of Hyrule."',
+    ticketLink: "https://givebutter.com/stlvgmo-echoes-of-hyrule",
   },
   {
     id: "trivia-night-2026",
@@ -63,8 +63,7 @@ export const upcomingEvents: Event[] = [
     city: "St. Louis",
     state: "MO",
     zip: "63303",
-    description:
-      "Full details will be announced soon.",
+    description: "Full details will be announced soon.",
     ticketLink: "/events",
   },
   // Add more events below - just copy the template above and update the details!
