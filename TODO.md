@@ -1,7 +1,3 @@
-# TODO - Footer and Sitewide Tag Update
-
-- [x] Update footer to include legal name and DBA:
-  - Legal name: ST LOUIS VIDEO GAME MUSIC ORCHESTRA
-  - DBA: STLVGMO
-- [x] Add Google tag (gtag.js) with ID AW-18045624850 in root layout head for every page
-- [ ] Verify footer text appears and script is loaded sitewide
+- [x] Update donate page with a prominent notice that percussion donations are gladly accepted.
+- [x] Ensure prominence via a styled callout section near top donation messaging.
+- [x] Mark tasks complete after code update.

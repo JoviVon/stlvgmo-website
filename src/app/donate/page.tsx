@@ -38,6 +38,34 @@ export default function Donate() {
             </div>
           </div>
 
+          {/* Prominent Percussion Donation Notice */}
+          <div className="mb-8 p-6 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border-2 border-emerald-300 dark:border-emerald-700 rounded-lg shadow-sm">
+            <div className="flex items-start">
+              <svg
+                className="w-7 h-7 text-emerald-700 dark:text-emerald-400 mr-3 mt-0.5 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.79 2-4 2s-4-.895-4-2 1.79-2 4-2 4 .895 4 2zm12-4c0 1.105-1.79 2-4 2s-4-.895-4-2 1.79-2 4-2 4 .895 4 2zM9 10l12-3"
+                />
+              </svg>
+              <div>
+                <h3 className="text-xl font-extrabold text-emerald-900 dark:text-emerald-300 mb-2">
+                  We Gladly Accept Percussion Donations
+                </h3>
+                <p className="text-lg text-emerald-900/90 dark:text-emerald-200">
+                  STLVGMO is actively accepting percussion donations to help
+                  expand and support our performances.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="prose prose-lg dark:prose-invert max-w-none mb-12">
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               Your generous donations help us continue bringing the magic of
