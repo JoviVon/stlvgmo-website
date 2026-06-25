@@ -48,17 +48,31 @@ export default function Index() {
         </section>
 
         <section className="my-8">
-          <Link href="/events" className="block">
-            <div className="relative w-full h-[85vh] max-h-[900px] min-h-[520px] overflow-hidden rounded-2xl">
-              <Image
-                src="/assets/STL_VGM_Orchestra_3.png"
-                alt="Upcoming STLVGMO concert flyer"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-          </Link>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <Link href="/events" className="block">
+              <div className="relative w-full h-[70vh] max-h-[820px] min-h-[460px] overflow-hidden rounded-2xl">
+                <Image
+                  src="/assets/STL_VGM_Orchestra_3.png"
+                  alt="Upcoming STLVGMO concert flyer"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </Link>
+
+            <Link href="/trivia" className="block">
+              <div className="relative w-full h-[70vh] max-h-[820px] min-h-[460px] overflow-hidden rounded-2xl">
+                <Image
+                  src="/assets/STLVGMO_trivianight2026_digitalposter.png"
+                  alt="STLVGMO Trivia Night 2026 digital poster"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </Link>
+          </div>
         </section>
 
         <UpcomingEvents />
